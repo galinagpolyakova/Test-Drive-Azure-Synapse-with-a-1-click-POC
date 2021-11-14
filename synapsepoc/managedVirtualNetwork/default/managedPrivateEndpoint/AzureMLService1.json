@@ -1,0 +1,7 @@
+{
+	"name": "AzureMLService1",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/a1f26426-ee9b-4afa-970a-9b7a77fa5b39/resourceGroups/asa1click/providers/Microsoft.MachineLearningServices/workspaces/aml-1cd",
+		"groupId": "amlworkspace"
+	}
+}

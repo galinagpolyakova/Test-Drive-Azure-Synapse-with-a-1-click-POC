@@ -16,13 +16,14 @@
 			"conf": {
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
-				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "3d53e071-f942-4e00-8267-48f8cc1fc771"
+				"spark.dynamicAllocation.maxExecutors": "2"
 			}
 		},
 		"metadata": {
 			"saveOutput": true,
-			"enableDebugMode": false,
+			"synapse_widget": {
+				"version": "0.1"
+			},
 			"kernelspec": {
 				"name": "synapse_pyspark",
 				"display_name": "Synapse PySpark"
@@ -31,10 +32,10 @@
 				"name": "python"
 			},
 			"a365ComputeOptions": {
-				"id": "/subscriptions/a1f26426-ee9b-4afa-970a-9b7a77fa5b39/resourceGroups/asa1click/providers/Microsoft.Synapse/workspaces/nfc4bc33y6wylcpmpocws1/bigDataPools/ws1sparkpool1",
+				"id": "/subscriptions/4eeedd72-d937-4243-86d1-c3982a84d924/resourceGroups/nashahzsfin/providers/Microsoft.Synapse/workspaces/mfstspdjvzuh3xeu2pocws1/bigDataPools/ws1sparkpool1",
 				"name": "ws1sparkpool1",
 				"type": "Spark",
-				"endpoint": "https://nfc4bc33y6wylcpmpocws1.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/ws1sparkpool1",
+				"endpoint": "https://mfstspdjvzuh3xeu2pocws1.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/ws1sparkpool1",
 				"auth": {
 					"type": "AAD",
 					"authResource": "https://dev.azuresynapse.net"
@@ -42,10 +43,8 @@
 				"sparkVersion": "2.4",
 				"nodeCount": 5,
 				"cores": 8,
-				"memory": 56,
-				"automaticScaleJobs": false
-			},
-			"sessionKeepAliveTimeout": 30
+				"memory": 56
+			}
 		},
 		"cells": [
 			{
@@ -112,7 +111,7 @@
 					"#To make development easier, faster and less expensive downsample for now\n",
 					"sampled_taxi_df = nyc_tlc_df.sample(True, 0.001, seed=1234)"
 				],
-				"execution_count": null
+				"execution_count": 3
 			},
 			{
 				"cell_type": "markdown",
@@ -293,7 +292,7 @@
 					"metrics = BinaryClassificationMetrics(predictionAndLabels)\n",
 					"print(\"Area under ROC = %s\" % metrics.areaUnderROC)"
 				],
-				"execution_count": 9
+				"execution_count": 10
 			},
 			{
 				"cell_type": "markdown",
@@ -317,7 +316,7 @@
 					"plt.ylabel('True Positive Rate')\n",
 					"plt.show()"
 				],
-				"execution_count": 12
+				"execution_count": null
 			}
 		]
 	}
